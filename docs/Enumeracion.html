@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Enumeracion</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Enumeracion</h1><br/><strong><span style="text-decoration:underline;">ENUMERACIÓN CON PING</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;ping&nbsp;-c&nbsp;1&nbsp;127.0.0.1<br />PING&nbsp;127.0.0.1&nbsp;(127.0.0.1)&nbsp;56(84)&nbsp;bytes&nbsp;of&nbsp;data.<br />64&nbsp;bytes&nbsp;from&nbsp;127.0.0.1:&nbsp;icmp_seq=1&nbsp;ttl=64&nbsp;time=0.026&nbsp;ms<br /><br />---&nbsp;127.0.0.1&nbsp;ping&nbsp;statistics&nbsp;---<br />1&nbsp;packets&nbsp;transmitted,&nbsp;1&nbsp;received,&nbsp;0%&nbsp;packet&nbsp;loss,&nbsp;time&nbsp;0ms<br />rtt&nbsp;min/avg/max/mdev&nbsp;=&nbsp;0.026/0.026/0.026/0.000&nbsp;ms</div></div><br /><br />Cuando hacemos el ping vemos que pone <strong>TTL</strong> y gracias a eso podemos identificar el sistema operativo del equipo<br /><br /><table class="table"><tr><th>Sistema Operativo</th><th>Time to Live</th></tr><tr><td>Linux</td><td>64</td></tr><tr><td>Windows</td><td>128</td></tr><tr><td>IOS y Cisco Routers</td><td>255</td></tr></table><br /><br /><strong><span style="text-decoration:underline;">ENUMERACIÓN CON NMAP</span></strong><br /><br /><span style="text-decoration:underline;">Nmap con formato Grepeable y funcion en .bashrc para filtrado de puertos:</span><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;nmap&nbsp;10.0.0.1&nbsp;-p-&nbsp;--open&nbsp;-T5&nbsp;-v&nbsp;-n&nbsp;-oG&nbsp;FicheroPuertos</div></div><br /><br /><span style="text-decoration:underline;">Nmap listar servicios:</span><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;nmap&nbsp;10.0.0.1&nbsp;-p-&nbsp;--open&nbsp;-T5&nbsp;-v&nbsp;-n&nbsp;-oG&nbsp;FicheroPuertos</div></div><br /></div>
+</body>
+</html>
