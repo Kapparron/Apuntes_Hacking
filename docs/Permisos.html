@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Permisos</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Permisos</h1><br/>Para los permisos rwx rwx rwx → para calcularlos se contaria con 1 y  0<br /><br />    rwx rwx rwx       r-x  rwx  --x<br />	  7    7    7         5     7    1<br />	111 111 111     101 111 001<br />	<br />Cuando hay un uno significa que se eleva un 2 a la posicion en la que este es decir si por ejemplo es 111 seria 2^2+2^1+2^0 que seria igual a 7, otro ejemplo seria 101 que seria 2^2+0+2^0 que seria igual a 5<br />	<br />Podremos usar el comando FIND para buscar archivos con permisos de escritura y podemos usar el grep para fitrar los resultados:<br /><br /><div class="codebox"><div class="codebox">┌──<span style="color:#ff9d00;font-weight:700">(</span>kali@kali<span style="color:#ff9d00;font-weight:700">)</span>-[~]<br />└─$&nbsp;<span style="color:#ff9d00;font-weight:700">find</span>&nbsp;<span style="color:#333333;font-weight:400">\-</span>writable&nbsp;2&gt;&nbsp;<span style="color:#ff9d00;font-weight:700">/</span>dev<span style="color:#ff9d00;font-weight:700">/</span>null</div></div><br /><br />Ver la configuracion de sudoers sobre un usuario:<br /><br /><div class="codebox"><div class="codebox">┌──<span style="color:#ff9d00;font-weight:700">(</span>kali@kali<span style="color:#ff9d00;font-weight:700">)</span>-[~]<br />└─$&nbsp;<span style="color:#ff9d00;font-weight:700">sudo</span>&nbsp;-l</div></div></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ApuntesHacking.ctb</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='two-panels'>
+<div class='tree-panel'>
+<div class='tree'>
+<p>
+<strong>Index</strong></br>
+<button onclick='expandAllSubtrees()'>Expand All</button> <button onclick='collapseAllSubtrees()'>Collapse All</button>
+</p>
+<ul class='outermost'>
+<li class='leaf'><a href='#' onclick="changeFrame('Recomendacion.html')">Recomendacion</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Permisos.html')">Permisos</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Permisos--SUID.html')">SUID</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Permisos--Permisos_-etc-passwd.html')">Permisos /etc/passwd</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Tareas_Cron.html')">Tareas Cron</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Tareas_Cron--Detectar_cron.html')">Detectar cron</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('PATH_Hijacking.html')">PATH Hijacking</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Capabilities.html')">Capabilities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Enumeracion.html')">Enumeracion</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Wildcards.html')">Wildcards</a></li>
+</ul>
+</div>
+</div>
+<div class='page-panel'><iframe src='' id='page_frame'></iframe></div></div><script src='res/script3.js'></script>
+
+</body>
+</html>
