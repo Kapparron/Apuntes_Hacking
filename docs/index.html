@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ApuntesHacking.ctb</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='two-panels'>
+<div class='tree-panel'>
+<div class='tree'>
+<p>
+<strong>Apuntes Kapparron</strong></br>
+<button onclick='expandAllSubtrees()'>Expandir Modulos</button> <button onclick='collapseAllSubtrees()'>Contraer Modulos</button>
+</p>
+<ul class='outermost'>
+<li class='leaf'><a href='#' onclick="changeFrame('Recomendacion.html')">Recomendacion</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Conceptos_Basicos.html')">Conceptos Basicos</a></li><ul class='subtree'>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Conceptos_Basicos--Permisos.html')">Permisos</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Conceptos_Basicos--Permisos--SUID.html')">SUID</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Conceptos_Basicos--Permisos--Permisos_-etc-passwd.html')">Permisos /etc/passwd</a></li>
+</ul>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Enumeracion.html')">Enumeracion</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Enumeracion--Enumeracion_Basica.html')">Enumeracion Basica</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Enumeracion--Enumeracion_Web.html')">Enumeracion Web</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Enumeracion--Fuzzing.html')">Fuzzing</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Enumeracion--Sniffer.html')">Sniffer</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Explotacion.html')">Explotacion</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Explotacion--Capabilities.html')">Capabilities</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Explotacion--PATH_Hijacking.html')">PATH Hijacking</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Explotacion--Tareas_Cron.html')">Tareas Cron</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Explotacion--Tareas_Cron--Detectar_cron.html')">Detectar cron</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('Explotacion--Wildcards.html')">Wildcards</a></li>
+</ul>
+</ul>
+</div>
+</div>
+<div class='page-panel'><iframe src='' id='page_frame'></iframe></div></div><script src='res/script3.js'></script>
+
+</body>
+</html>
