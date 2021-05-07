@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Sniffer</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Sniffer</h1><br/><strong><span style="text-decoration:underline;">CAPTURAR TRAFICO CON TCP DUMP</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;tcpdump&nbsp;-i&nbsp;tun0&nbsp;-w&nbsp;Captura.cap&nbsp;-v</div></div><br /><br /><strong><span style="text-decoration:underline;">VER EL TRAFICO CAPTURADO CON TSHARK</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;tshark&nbsp;-r&nbsp;Captura.cap&nbsp;2&gt;/dev/null</div></div><br />Con este comando nos sacara todos los paquetes capturados por tcpdump y ahora podremos aplicarle filtros para verlo todo mas comodo<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;tshark&nbsp;-r&nbsp;Captura.cap&nbsp;-Y&nbsp;&quot;http&quot;&nbsp;2&gt;/dev/null</div></div><br /><br />Otra forma de verlo sera en formato JSON<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;tshark&nbsp;-r&nbsp;Captura.cap&nbsp;-Y&nbsp;&quot;http&quot;&nbsp;-Tjson&nbsp;2&gt;/dev/null</div></div><br /><br />Una vez veamos el JSON veremos los diferentes campos y podremos filtrarlos por estos, en este caso veremos la peticion en bruto<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;tshark&nbsp;-r&nbsp;Captura.cap&nbsp;-Y&nbsp;&quot;http&quot;&nbsp;-Tfields&nbsp;-e&nbsp;tcp.payload&nbsp;2&gt;/dev/null</div></div><br /><br />Nos aparecera en hexadecimal y para ello haremos lo siguiente<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;tshark&nbsp;-r&nbsp;Captura.cap&nbsp;-Y&nbsp;&quot;http&quot;&nbsp;-Tfields&nbsp;-e&nbsp;tcp.payload&nbsp;2&gt;/dev/null&nbsp;|&nbsp;xxd&nbsp;-ps&nbsp;-r</div></div><br /><br /><br /><br /><br /><a href="Enumeracion.html">Volver al indice</a><br /></div>
+</body>
+</html>

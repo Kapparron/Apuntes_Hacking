@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Type Juggling</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Type Juggling</h1><br/>Cuando un servidor valida una contraseña por ejemplo, usando strcompare es vulnerable a un Type juggling. En el siguiente ejemplo podremos ver como saltarnos la verificacion<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;curl&nbsp;-s&nbsp;-X&nbsp;POST&nbsp;--data&nbsp;&#39;usuario=admin&amp;password[]=contraseña&#39;&nbsp;http://10.0.0.1/login.php</div></div><br /><br />Los corchetes en el campo password haran que el strcompare falle dejandonos acceder a paginas sensibles<br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a></div>
+</body>
+</html>

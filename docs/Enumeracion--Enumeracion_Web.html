@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Enumeracion Web</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Enumeracion Web</h1><br/><br /><strong><span style="text-decoration:underline;">LISTAR INFORMACIÓN RELEVANTE DE UN SERVIDOR WEB</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;whatweb&nbsp;http://10.0.0.1</div></div><br /><br /><strong><span style="text-decoration:underline;">VIRTUAL HOST ROUTING</span></strong><br /><br />Te permite contrar con varios servidores web en una maquina, para dirigirnos a otro server lo indicamos en el /etc/hosts<br /><br /><div class="codebox"><div class="codebox">127.0.0.1&nbsp;localhost<br />10.0.0.1&nbsp;web.com</div></div><br /><br /><strong><span style="text-decoration:underline;">ANALISIS DNS</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;gobuster&nbsp;dns&nbsp;-d&nbsp;web.com&nbsp;-w&nbsp;diccionario.txt&nbsp;-i</div></div><br /><br /><strong><span style="text-decoration:underline;">WAFW00F</span></strong><br /><br />Sirve para identificar si el servidor web tiene un <strong>WAF</strong> (Web Aplication Firewall)<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;wafw00f&nbsp;http://10.0.0.1</div></div><br /><br /><strong><span style="text-decoration:underline;">WPSCAN</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;wpscan&nbsp;--url&nbsp;http://10.0.0.1&nbsp;-e&nbsp;vp,u</div></div><br /><br /><br /><br /><br /><a href="Enumeracion.html">Volver al indice</a></div>
+</body>
+</html>

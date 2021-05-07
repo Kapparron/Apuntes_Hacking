@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Abuso de SUID</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Abuso de SUID</h1><br/>Los SUID son permisos que nos permiten ejecutar temporalmente como el usuario definido como propietario del archivo.<br /><br /><span style="color:#d50cbb;">rwsr-x--x</span> la “s” que aparece significa que tenemos permisos de SUID<br /><br /><strong><span style="text-decoration:underline;">ASIGNAR PERMISOS SUID</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;chmod&nbsp;4755&nbsp;archivo<br /></div></div><br /><br /><strong><span style="text-decoration:underline;">LISTAR ARCHIVOS CON PERMISOS SUID</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;find&nbsp;\-perm&nbsp;-4000&nbsp;2&gt;&nbsp;/dev/null<br /></div></div><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;find&nbsp;/&nbsp;-user&nbsp;root&nbsp;-perm&nbsp;-4000&nbsp;-exec&nbsp;ls&nbsp;-ldb&nbsp;{}&nbsp;\;&nbsp;2&gt;&nbsp;/dev/null<br /></div></div><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;find&nbsp;/&nbsp;-user&nbsp;root&nbsp;-perm&nbsp;-6000&nbsp;-exec&nbsp;ls&nbsp;-ldb&nbsp;{}&nbsp;\;&nbsp;2&gt;&nbsp;/dev/null<br /></div></div><br /><br /><span style="color:#ff0000;">RECORDAR!!!!</span> → Cuando ejecutamos una bash con SUID es importante la flag “-p&quot; para iniciar esa bash como root<br /><br /><br />LINKS INTERES:<br /><br /><a href="https://gtfobins.github.io/">https://gtfobins.github.io/</a> → Para explotar binarios con permisos SUID<br /><br /><br /><br /><br /><a href="Escalada_de_Privilegios.html">Volver al indice</a></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Fuzzing</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Fuzzing</h1><br/><strong><span style="text-decoration:underline;">WFUZZ</span></strong><br /><br /><span style="text-decoration:underline;">Usar wfuzz sin incluir la excepcion 404:</span><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;wfuzz&nbsp;-c&nbsp;-L&nbsp;-t&nbsp;400&nbsp;--hc=404&nbsp;-w&nbsp;/usr/share/wordlist/diccionario.txt&nbsp;http://10.0.0.1/FUZZ</div></div><br /><br /><span style="text-decoration:underline;">Usar wfuzz sin incluir la excepcion 404 e indicando las extensiones en un archivo:</span><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;wfuzz&nbsp;-c&nbsp;-L&nbsp;-t&nbsp;400&nbsp;--hc=404&nbsp;-w&nbsp;/usr/share/wordlist/diccionario.txt&nbsp;-w&nbsp;extensiones.txt&nbsp;http://10.0.0.1/FUZZ.FUZ2Z</div></div><br /><br /><strong><span style="text-decoration:underline;">DIRB</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;dirb&nbsp;http://10.0.0.1&nbsp;-w&nbsp;/usr/share/wordlist/diccionario.txt</div></div><br /><br /><br /><strong><span style="text-decoration:underline;">GOBUSTER</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;gobuster&nbsp;dir&nbsp;-w&nbsp;/usr/share/wordlist/diccionario.txt&nbsp;--url&nbsp;http://10.0.0.1</div></div><br /><br /><strong><span style="text-decoration:underline;">DIRSEARCH</span></strong><br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;./dirsearch.py&nbsp;-u&nbsp;http://10.0.0.1&nbsp;-E&nbsp;-w&nbsp;/usr/share/wordlist/diccionario.txt</div></div><br /><br /><br /><br /><br /><a href="Enumeracion.html">Volver al indice</a><br /><br /></div>
+</body>
+</html>

